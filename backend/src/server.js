@@ -12,6 +12,9 @@ const PORT = process.env.PORT || 5001;
 // Mongodb connection call
 connectDB();
 
+// middleware
+app.use(express.json())
+
 app.use("/api/notes", notesRoute);
 
 app.listen(PORT, () => {
